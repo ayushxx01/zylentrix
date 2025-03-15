@@ -21,7 +21,7 @@ class _PostPageState extends State<PostPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Post Page')),
+      appBar: AppBar(title: Text('Post Page'), centerTitle: true),
       body: Center(
         child: FutureBuilder<List<Post>>(
           future: futurePosts,
@@ -37,23 +37,35 @@ class _PostPageState extends State<PostPage> {
                   final post = snapshot.data![index];
                   return Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Title: ${post.title}',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 7.0),
+                            child: Text(
+                              'Title: ${post.title}',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                        ),
-                        SizedBox(height: 16),
-                        Text(
-                          'Body: ${post.body}',
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        Divider(),
-                      ],
+                          SizedBox(height: 10),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 7.0),
+                            child: Text(
+                              'Body: ${post.body}',
+                              style: TextStyle(fontSize: 14),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
