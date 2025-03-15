@@ -1,16 +1,46 @@
 # zylentrix_assignment
+# API Fetching Flutter Application
 
-A new Flutter project.
+This Flutter application fetches data from a public API and displays it in a scrollable ListView. It includes loading indicators and error handling for a smooth user experience.
 
-## Getting Started
+## Features
+- Fetches posts from [JSONPlaceholder API](https://jsonplaceholder.typicode.com/posts)
+- Displays post titles in a ListView
+- Shows a CircularProgressIndicator while loading
+- Handles errors gracefully and displays appropriate messages
 
-This project is a starting point for a Flutter application.
+## Screenshots
+### Main Screen
+![Main Screen](lib/screenshots/main.png)
 
-A few resources to get you started if this is your first Flutter project:
+### Loading State
+![Loading State](lib/screenshots/loading.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Setup Instructions
+1. **Clone the repository:**
+   ```sh
+   git clone <repository-url>
+   cd api_fetch_app
+   ```
+2. **Install dependencies:**
+   ```sh
+   flutter pub get
+   ```
+3. **Run the app:**
+   ```sh
+   flutter run
+   ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Assumptions & Enhancements
+- The app assumes a working internet connection to fetch data.
+- Error handling displays appropriate messages when the API fails.
+- Simple UI with ListView and a CircularProgressIndicator for a smooth experience.
+
+## Dependencies
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.5
+```
+
