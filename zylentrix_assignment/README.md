@@ -11,10 +11,10 @@ This Flutter application fetches data from a public API and displays it in a scr
 
 ## Screenshots
 ### Main Screen
-![Main Screen](lib/screenshots/main.png)
+![Main Screen](lib/screenshot/main.png)
 
 ### Loading State
-![Loading State](lib/screenshots/loading.png)
+![Loading State](lib/screenshot/loading.png)
 
 ## Setup Instructions
 1. **Clone the repository:**
